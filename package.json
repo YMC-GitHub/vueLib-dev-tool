@@ -1,0 +1,36 @@
+{
+  "name": "vuelib-dev-tool",
+  "version": "1.0.0",
+  "description": "a tool for building vue componnets lib",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --content-base demo --hot --port 8082 --config webpack.dev.config.js",
+    "build": "webpack --config webpack.pro.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YMC-GitHub"
+  },
+  "keywords": [
+    "vue",
+    "webpack",
+    "lib",
+    "dev",
+    "ymc"
+  ],
+  "author": "Ymc hualei03042013@163.com",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^0.28.11",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
+  }
+}
