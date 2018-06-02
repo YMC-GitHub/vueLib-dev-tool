@@ -2,7 +2,7 @@
   "name": "vuelib-dev-tool",
   "version": "1.0.0",
   "description": "a tool for building vue componnets lib",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base demo --hot --port 8082 --config webpack.dev.config.js",
     "build": "webpack --config webpack.pro.config.js"
