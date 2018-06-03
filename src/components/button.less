@@ -1,0 +1,92 @@
+@smUI-color-warm: #009688;
+@smUI-color-primary: #5FB878;
+@smUI-color-danger: #FF5722;
+@smUI-color-disabled: #FBFBFB;
+@smUI-color-normal: #1E9FFF;
+@btn-3d__size: 25px;
+@btn-3d__color: #4e4545;
+@btn-3d__shadowW: 5px;
+
+.smUI__unselect {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    margin: 10px 50px;
+}
+.smUI-3d-btn {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100px;
+    line-height: @btn-3d__size;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    float: left;
+    position: relative;
+    transform: rotateX(-20deg);
+    transform-origin: top;
+    border-radius: 5px;
+}
+.btn-3d_shadow(@btn-3d_shadow--color: #4e4545) {
+    box-shadow: 0px @btn-3d__shadowW 1px 0px @btn-3d_shadow--color;
+}
+
+.btn-3d_shadow--active(@btn-3d_shadow--color: #4e4545) {
+    box-shadow: 0px 1px 1px @btn-3d_shadow--color;
+    transform: rotateX(0deg);
+    text-shadow: 0px 0px 5px white;
+}
+
+.make-3d-btn_shadow(@btn-3d_shadow--color: #4e4545) {
+    .btn-3d_shadow( @btn-3d_shadow--color);
+    &:active {
+        .btn-3d_shadow--active(@btn-3d_shadow--color);
+    }
+}
+/*color-style*/
+.smUI-3d-btn__gray {
+    background: gray;
+    color: #4e4545;
+    .make-3d-btn_shadow(gray);
+}
+.smUI-3d-btn__steelblue {
+    background: steelblue;
+    color: #2b608d;
+    .make-3d-btn_shadow(steelblue);
+}
+.smUI-3d-btn__wheat {
+    background: #CC0000;
+    color: #880000;
+    .make-3d-btn_shadow(#CC0000);
+}
+.smUI-3d-btn__aquamarine {
+    background: #009966;
+    color: #336666;
+    .make-3d-btn_shadow(#009966);
+}
+.smUI-3d-btn__blueviolet {
+    background: blueviolet;
+    color: #5f1d9d;
+    .make-3d-btn_shadow(blueviolet);
+}
+.smUI-3d-btn__warm {
+    background: @smUI-color-warm;
+    color: white;
+    .make-3d-btn_shadow(@smUI-color-warm);
+}
+.smUI-3d-btn__danger {
+    background: @smUI-color-danger;
+    color: white;
+    .make-3d-btn_shadow(@smUI-color-danger);
+}
+.smUI-3d-btn__disabled {
+    background: @smUI-color-disabled;
+    color: white;
+    .make-3d-btn_shadow(@smUI-color-disabled);
+}
+.smUI-3d-btn__sm {
+    line-height:20px;
+}
+.smUI-3d-btn__lg {
+    line-height:50px;
+}
+

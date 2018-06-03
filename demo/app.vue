@@ -4,6 +4,9 @@
 		<h1>hi,boy!</h1>
 		<div>
 			<v-button>Hello</v-button>
+			<v-button color="gray">Hello</v-button>
+			<v-button color="warm">Hello</v-button>
+			<v-button color="warm" size="sm">Hello</v-button>
 		</div>
 	</div>
 </template>

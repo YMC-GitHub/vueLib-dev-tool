@@ -22,13 +22,62 @@ module.exports = {
 			amd: 'vue'
 		}
 	},
-	mode: 'development',
 	//模块匹配
 	module: {
 		rules: [{
-			test: /\.vue$/,
-			use: ['vue-loader']
-		}]
+				test: /\.vue$/,
+				loader: 'vue-loader',
+				options: {
+					loaders: {
+						css: [
+							'vue-style-loader',
+							{
+								loader: 'css-loader',
+								options: {
+									sourceMap: true,
+								},
+							}
+						],
+						less: [
+							'vue-style-loader',
+							{
+								loader: 'css-loader',
+								options: {
+									sourceMap: true,
+								},
+							},
+							{
+								loader: 'postcss-loader',
+								options: {
+									sourceMap: true,
+								},
+							},
+							{
+								loader: 'less-loader',
+								options: {
+									strictMath: true,
+									strictUnits: true,
+									ieCompat: true,
+									sourceMap: true
+								}
+							}
+						],
+					},
+					postLoaders: {
+						html: 'babel-loader?sourceMap'
+					},
+					sourceMap: true,
+				}
+			},
+			{
+				test: /\.js$/,
+				loader: 'babel-loader',
+				options: {
+					sourceMap: true,
+				},
+				exclude: /node_modules/,
+			}
+		]
 	},
 	//模块查找
 	resolve: {

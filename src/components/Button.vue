@@ -1,53 +1,72 @@
 <template>
-	<div>
-		<div class="btnpd05 blueviolet">
-			<span @click="handleClick"><slot></slot></span>
-			<div class="bd5fl">
-				<div class="bd5fl01"></div>
-			</div>
-			<div class="bd5fr">
-				<div class="bd5fr01"></div>
-			</div>
-		</div>
+	<div @click="handleClick" :class="wrapClass">
+		button
 	</div>
 </template>
 <script>
+	function oneOf(value, validList) {
+		for(var i = 0; i < validList.length; i++) {
+			if(value === validList[i]) {
+				return true;
+			}
+		}
+		return false;
+	}
 	export default {
 		name: 'v-button',
 		props: {
-			id: {
-				type: String,
-				default: null
+			value: {
+				type: [String, Number, Boolean],
+				default: false
 			},
-			customClass: {
-				type: String,
-				default: null
+			size: {
+				validator: function(value) {
+					return oneOf(value, ['sm', 'lg']);
+				}
+			},
+			color: {
+				validator: function(value) {
+					return oneOf(value, ['primary', 'normal', 'warm', 'danger', 'disabled', 'gray']);
+				}
+			},
+			shape: {
+				validator: function(value) {
+					return oneOf(value, ['radius']);
+				}
 			},
 			name: {
-				type: String,
-				default: null
+				type: String
 			},
 			disabled: {
 				type: Boolean,
 				default: false
-			},
-			large: {
-				type: Boolean,
-				default: false
-			},
-			markup: {
-				type: String,
-				default: 'default'
 			}
 		},
+
 		methods: {
 			handleClick(e) {
-				this.$emit('click', e)
+				this.$emit('click', e);
+				console.log(`hey, man!`)
+			}
+		},
+		computed: {
+			wrapClass() {
+				var prefix = 'smUI-3d-btn';
+				return [
+					`${prefix}`,
+					`smUI__unselect`,
+					{
+						[`${prefix}__disabled`]: !!this.disabled,
+						[`${prefix}__${this.color}`]: this.color,
+						[`${prefix}__${this.size}`]: this.size,
+						[`${prefix}__${this.shape}`]: this.shape,
+					}
+				];
 			}
 		}
 	}
 </script>
 
-<style scoped>
-	@import url("buttons.css");
+<style lang="less" scoped>
+	@import url("button.less");
 </style>
