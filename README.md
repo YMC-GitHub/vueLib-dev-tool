@@ -15,7 +15,7 @@ step01:复制package.json
 step02:npm install
 
 方式2：
-git clone  -b 1.1.0 https://github.com/YMC-GitHub/vueLib-dev-tool.git
+git clone  -b 1.2.1 https://github.com/YMC-GitHub/vueLib-dev-tool.git
 ......
 
 //开发
