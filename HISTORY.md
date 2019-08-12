@@ -12,42 +12,83 @@ npm int
 
 
 #### 组件编译
-通过使用vue-loader对.vue单文件组件文件进行加载。
+通过使用vue-loader对.vue单文件组件文件进行加载。对.vue文件中style标签内的css先用css-loader再用vue-style-loader加载；对.vue文件中style标签内的less用less-loader和postcss-loader加载以及用相应的处理器处理后，再将它视为css处理。
 ```
 //安装类库
 npm i vue-loader@14.2.2 css-loader@0.28.11 vue-template-compiler@2.5.16 --save-dev
 //配置文件
-module.exports = {
-  module: {
-     rules: [
-      {
-        test: /\.vue$/,
-        use: ['vue-loader']
-      }
-    ]
-  }
-};
+{
+test: /\.vue$/,
+loader: 'vue-loader',
+options: vueLoaderOptions//在webpack.pro.config.js或webpack.dev.config.js中查看详情
+},
 ```
 
 #### 开发部署
-以`src`目录下的`main.js`作为脚本入口文件，
-以`dist`目录下的`bundle.js`作为脚本出口文件，
+development时以`demo`目录下的`main.js`作为脚本入口文件，以`dist`目录下的`bundle.js`作为脚本出口文件。
+production时以`src`目录下的`index.js`作为脚本入口文件，以`dist`目录下的`bundle.js`作为脚本出口文件。
 ```
 const path = require('path');
 module.exports = {
-  entry: './src/main.js',
+  entry: './demo/main.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './dist')
-  },
-  mode: 'development'
+  }
 }
 ```
 
-#### 运行依赖
-此处使用2.5.16版本作为运行时的依赖。
+#### 类库规范
+
+production时设置类库规范为`umd`，类库的amd全局变量名为`Vbutton`。
 ```
-npm i vue@2.5.16 --save
+	output: {
+		//...
+		library: 'Vbutton',
+		libraryTarget: 'umd'
+	},
+```
+在示例中通过如下方式进行引用类库
+```
+//demo/src/main.js
+import Vue from 'vue'
+import smUI from '../src/index.js'
+Vue.use(smUI, {});
+```
+
+
+#### 打包忽略
+production时对vue类库进行打包忽略，在产品中通过自行引入相关的vuejs版本依赖。development时不对ue类库进行打包忽略。下面是production时的配置，development时去掉
+```
+	externals: {
+		vue: {
+			root: 'Vue',
+			commonjs: 'vue',
+			commonjs2: 'vue',
+			amd: 'vue'
+		}
+	}
+```
+
+#### 源码追踪
+
+development时设置webpack的devtool为`eval-source-map`，以便追踪错误
+
+
+#### 环境标识
+
+development时设置webpack的mode为`development`，启用一些webpack的内部配置。
+production时设置webpack的mode为`production`，启用一些webpack的内部配置。
+
+#### 别名系统
+
+通过import引入vue组件时，引用`node_modulevue/dist/`目录下的`vue.js`。一是实现简写，二是防止webpack对vue的再次编译，这是一处拦截，还可通过其他设置进行拦截。
+```
+const resolve = {
+	alias: {
+		'vue': 'vue/dist/vue.js'
+	}
+};
 ```
 
 #### 建服务器
@@ -63,18 +104,6 @@ npm i webpack@4.0.5 webpack-cli@2.0.14 webpack-dev-server@3.1.3 --save-dev
 npm run dev
 ```
 
-#### 打包忽略
-production时对vue类库进行打包忽略，在产品中通过自行引入相关的vuejs版本依赖。development时不对ue类库进行打包忽略。下面是production时的配置，development时去掉
-```
-	externals: {
-		vue: {
-			root: 'Vue',
-			commonjs: 'vue',
-			commonjs2: 'vue',
-			amd: 'vue'
-		}
-	}
-```
 #### 优化压缩
 production时对`bundle.js`文件进行压缩，另外生成一个`bundle.js.gz`的压缩文件。
 ```
