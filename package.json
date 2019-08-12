@@ -1,8 +1,14 @@
 {
   "name": "vuelib-dev-tool",
-  "version": "1.0.1",
+  "version": "1.2.1",
   "description": "a tool for building vue componnets lib",
   "main": "dist/bundle.js",
+  "files": [
+    "dist/bundle.js",
+    "README.md",
+    "package.json",
+    "bundle.js.gz"
+  ],
   "scripts": {
     "dev": "webpack-dev-server --content-base demo --hot --port 8082 --config webpack.dev.config.js",
     "pro": "webpack --config webpack.pro.config.js"
@@ -31,7 +37,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "compression-webpack-plugin": "^1.1.12",
-    "css-loader": "^0.28.11",
+    "css-loader": "^3.2.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "postcss-loader": "^2.1.6",
