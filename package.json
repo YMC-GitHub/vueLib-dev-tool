@@ -5,7 +5,7 @@
   "main": "dist/bundle.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base demo --hot --port 8082 --config webpack.dev.config.js",
-    "build": "webpack --config webpack.pro.config.js"
+    "pro": "webpack --config webpack.pro.config.js"
   },
   "repository": {
     "type": "git",
