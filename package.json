@@ -18,7 +18,7 @@
     "dev",
     "ymc"
   ],
-  "author": "Ymc hualei03042013@163.com",
+  "author": "yemiancheng <ymc.github@gmail.com> (https://github.com/YMC-GitHub)",
   "license": "ISC",
   "dependencies": {
     "vue": "^2.6.10"
