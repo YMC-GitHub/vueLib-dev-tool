@@ -19,7 +19,7 @@
     "ymc"
   ],
   "author": "yemiancheng <ymc.github@gmail.com> (https://github.com/YMC-GitHub)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "vue": "^2.6.10"
   },
