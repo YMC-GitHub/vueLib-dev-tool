@@ -29,6 +29,27 @@ npm run build
 
 ### how to use with producton?
 
+get demo [here](https://ymc-github.github.io/vueLib-dev-tool/demo/dist/index.html)
+
+01.install him `npm install  xxx`
+
+02.use him [demo](./demo/src/main.js#L1-#L3) :
+```
+//way:00 use as a locaol component
+import VueButton from 'xxx'
+//..
+
+//way:01 use as a global component
+import Vue from 'vue'
+import VueButton from 'xxx'
+Vue.component('v-button', VueButton)
+
+//way:02 use as a global component with some arg
+import Vue from 'vue'
+import smUI from 'xxx'
+Vue.use(smUI, {});
+```
+
 ## author
 
 yemiancheng <ymc.github@gmail.com>
