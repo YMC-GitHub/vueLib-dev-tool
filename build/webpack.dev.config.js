@@ -1,5 +1,5 @@
 const path = require('path');
-
+const dirConfig = require('../config/dir.construtor');
 const resolve = {
   alias: {
     'vue': 'vue/dist/vue.js'
@@ -48,10 +48,10 @@ const vueLoaderOptions = {
 }
 
 module.exports = {
-  entry: path.resolve(__dirname, '../demo/main.js'),
+  entry: path.resolve(dirConfig.demo, 'main.js'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../demo')
+    path: dirConfig.demo
   },
   devtool: '#eval-source-map',
   mode: 'development',

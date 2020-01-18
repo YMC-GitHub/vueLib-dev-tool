@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const uglifyjsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin")
-
+const dirConfig = require('../config/dir.construtor');
 const externals = {
   vue: {
     root: 'Vue',
@@ -60,11 +60,11 @@ const vueLoaderOptions = {
 
 module.exports = {
   //模块入口
-  entry: path.resolve(__dirname, '../src/index.js'),
+  entry: path.resolve(dirConfig.src, 'index.js'),
   //模块出口
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist'),
+    path: dirConfig.dist,
     //publicPath:"./",
     library: 'Vbutton',
     libraryTarget: 'umd'
