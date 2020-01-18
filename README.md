@@ -1,40 +1,38 @@
-### vue组件开发环境搭建
+# vue-lib-dev-with-webpack
 
-##### 功能简介
+## desc
 
- - 组件编译
- - 打包忽略
- - 压缩优化
+vue lib develop with webpack
 
-##### 安装使用
+## quick start
+
 ```sh
-::<<eof
-方式1：
-step01:复制package.json
-step02:npm install
+#下拉代码
+#默认分支：
+git clone git@github.com:YMC-GitHub/vueLib-dev-tool.git
+#指定分支：
+git clone -b dev git@github.com:YMC-GitHub/vueLib-dev-tool.git
+#指定标签：
+git clone -b v1.0.0 git@github.com:YMC-GitHub/vueLib-dev-tool.git
+#...
 
-方式2：
-git clone  -b 1.2.1 https://github.com/YMC-GitHub/vueLib-dev-tool.git
-......
-
-//开发
+#研发
 npm run dev
 
-//构建
-npm run pro
-eof
+#生产
+npm run build
 ```
 
-##### 一些命令
-```sh
-::<<eof
-#开发
-npm run dev
-#构建
-npm run pro
-eof
-```
+## get more
 
+### how to use with developer?
 
-##### 建设记录
-若想知道是怎么建的请点击[这里](./HISTORY.md)
+### how to use with producton?
+
+## author
+
+yemiancheng <ymc.github@gmail.com>
+
+## licence
+
+MIT
