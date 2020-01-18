@@ -60,11 +60,11 @@ const vueLoaderOptions = {
 
 module.exports = {
   //模块入口
-  entry: './src/index.js',
+  entry: path.resolve(__dirname, '../src/index.js'),
   //模块出口
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../dist'),
     //publicPath:"./",
     library: 'Vbutton',
     libraryTarget: 'umd'

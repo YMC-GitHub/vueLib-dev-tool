@@ -48,10 +48,10 @@ const vueLoaderOptions = {
 }
 
 module.exports = {
-  entry: './demo/main.js',
+  entry: path.resolve(__dirname, '../demo/main.js'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './demo')
+    path: path.resolve(__dirname, '../demo')
   },
   devtool: '#eval-source-map',
   mode: 'development',

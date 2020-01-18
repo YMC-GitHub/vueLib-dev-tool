@@ -10,9 +10,9 @@
     "bundle.js.gz"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --content-base demo --hot --port 8082 --config webpack.dev.config.js",
-    "build": "webpack --config webpack.pro.config.js",
-    "pro": "webpack --config webpack.pro.config.js"
+    "dev": "webpack-dev-server --content-base ../demo --hot --port 8082 --config build/webpack.dev.config.js",
+    "build": "webpack --config build/webpack.pro.config.js",
+    "pro": "webpack --config build/webpack.pro.config.js"
   },
   "repository": {
     "type": "git",
