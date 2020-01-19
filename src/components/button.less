@@ -1,3 +1,4 @@
+/* define some config */
 @smUI-color-warm: #009688;
 @smUI-color-primary: #5FB878;
 @smUI-color-danger: #FF5722;
@@ -5,7 +6,7 @@
 @smUI-color-normal: #1E9FFF;
 @btn-3d__size: 25px;
 @btn-3d__color: #4e4545;
-@btn-3d__shadowW: 5px;
+@btn-3d__shadow: 5px;
 
 .smUI__unselect {
     -webkit-user-select: none;
@@ -27,7 +28,7 @@
     border-radius: 5px;
 }
 .btn-3d_shadow(@btn-3d_shadow--color: #4e4545) {
-    box-shadow: 0px @btn-3d__shadowW 1px 0px @btn-3d_shadow--color;
+    box-shadow: 0px @btn-3d__shadow 1px 0px @btn-3d_shadow--color;
 }
 
 .btn-3d_shadow--active(@btn-3d_shadow--color: #4e4545) {
@@ -42,7 +43,7 @@
         .btn-3d_shadow--active(@btn-3d_shadow--color);
     }
 }
-/*color-style*/
+/*make his color*/
 .smUI-3d-btn__gray {
     background: gray;
     color: #4e4545;
@@ -83,6 +84,7 @@
     color: white;
     .make-3d-btn_shadow(@smUI-color-disabled);
 }
+/*make his size*/
 .smUI-3d-btn__sm {
     line-height:20px;
 }
