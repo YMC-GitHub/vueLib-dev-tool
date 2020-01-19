@@ -1,62 +1,12 @@
-const path = require('path');
 const webpack = require('webpack');
 const uglifyjsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin")
+const path = require('path');
+
 const dirConfig = require('../config/dir.construtor');
-const externals = {
-  vue: {
-    root: 'Vue',
-    commonjs: 'vue',
-    commonjs2: 'vue',
-    amd: 'vue'
-  }
-};
-const resolve = {
-  alias: {
-    'vue': 'vue/dist/vue.js'
-  }
-};
-const vueLoaderOptions = {
-  loaders: {
-    css: [
-      'vue-style-loader',
-      {
-        loader: 'css-loader',
-        options: {
-          sourceMap: true,
-        },
-      }
-    ],
-    less: [
-      'vue-style-loader',
-      {
-        loader: 'css-loader',
-        options: {
-          sourceMap: true,
-        },
-      },
-      {
-        loader: 'postcss-loader',
-        options: {
-          sourceMap: true,
-        },
-      },
-      {
-        loader: 'less-loader',
-        options: {
-          strictMath: true,
-          strictUnits: true,
-          ieCompat: true,
-          sourceMap: true
-        }
-      }
-    ],
-  },
-  postLoaders: {
-    html: 'babel-loader?sourceMap'
-  },
-  sourceMap: true,
-}
+const externals = require('./webpack.externals.config');
+const resolve = require('./webpack.resolve.config');
+const vueLoaderOptions = require('./vue-loader.config');
 
 module.exports = {
   //模块入口
@@ -65,7 +15,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: dirConfig.dist,
-    //publicPath:"./",
     library: 'Vbutton',
     libraryTarget: 'umd'
   },
@@ -92,7 +41,7 @@ module.exports = {
   //模块查找
   resolve,
   plugins: [
-    // 环境
+    // 环境变量
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     }),
