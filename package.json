@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "dev": "webpack-dev-server --content-base demo/src --hot --port 8082 --config build/webpack.dev.config.js",
-    "dev:demo": "webpack-dev-server --content-base demo/dist --hot --port 8082 --config build/webpack.demo.config.js",
+    "dev:demo": "webpack-dev-server --content-base demo/dist --hot --port 8082 --config build/webpack.demo-dev.config.js",
     "build": "webpack --config build/webpack.pro.config.js",
     "build:demo": "webpack --config build/webpack.demo-pro.config.js",
     "build:sfc": "webpack --config build/webpack.sfc-pro.config.js",
