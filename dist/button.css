@@ -1,0 +1,108 @@
+/* define some config */
+.smUI__unselect {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  margin: 10px 50px;
+}
+.smUI-3d-btn {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  float: left;
+  position: relative;
+  transform: rotateX(-20deg);
+  transform-origin: top;
+  border-radius: 5px;
+}
+/*make his color*/
+.smUI-3d-btn__gray {
+  background: gray;
+  color: #4e4545;
+  box-shadow: 0px 5px 1px 0px gray;
+}
+.smUI-3d-btn__gray:active {
+  box-shadow: 0px 1px 1px gray;
+  transform: rotateX(0deg);
+  text-shadow: 0px 0px 5px white;
+}
+.smUI-3d-btn__steelblue {
+  background: steelblue;
+  color: #2b608d;
+  box-shadow: 0px 5px 1px 0px steelblue;
+}
+.smUI-3d-btn__steelblue:active {
+  box-shadow: 0px 1px 1px steelblue;
+  transform: rotateX(0deg);
+  text-shadow: 0px 0px 5px white;
+}
+.smUI-3d-btn__wheat {
+  background: #CC0000;
+  color: #880000;
+  box-shadow: 0px 5px 1px 0px #CC0000;
+}
+.smUI-3d-btn__wheat:active {
+  box-shadow: 0px 1px 1px #CC0000;
+  transform: rotateX(0deg);
+  text-shadow: 0px 0px 5px white;
+}
+.smUI-3d-btn__aquamarine {
+  background: #009966;
+  color: #336666;
+  box-shadow: 0px 5px 1px 0px #009966;
+}
+.smUI-3d-btn__aquamarine:active {
+  box-shadow: 0px 1px 1px #009966;
+  transform: rotateX(0deg);
+  text-shadow: 0px 0px 5px white;
+}
+.smUI-3d-btn__blueviolet {
+  background: blueviolet;
+  color: #5f1d9d;
+  box-shadow: 0px 5px 1px 0px blueviolet;
+}
+.smUI-3d-btn__blueviolet:active {
+  box-shadow: 0px 1px 1px blueviolet;
+  transform: rotateX(0deg);
+  text-shadow: 0px 0px 5px white;
+}
+.smUI-3d-btn__warm {
+  background: #009688;
+  color: white;
+  box-shadow: 0px 5px 1px 0px #009688;
+}
+.smUI-3d-btn__warm:active {
+  box-shadow: 0px 1px 1px #009688;
+  transform: rotateX(0deg);
+  text-shadow: 0px 0px 5px white;
+}
+.smUI-3d-btn__danger {
+  background: #FF5722;
+  color: white;
+  box-shadow: 0px 5px 1px 0px #FF5722;
+}
+.smUI-3d-btn__danger:active {
+  box-shadow: 0px 1px 1px #FF5722;
+  transform: rotateX(0deg);
+  text-shadow: 0px 0px 5px white;
+}
+.smUI-3d-btn__disabled {
+  background: #FBFBFB;
+  color: white;
+  box-shadow: 0px 5px 1px 0px #FBFBFB;
+}
+.smUI-3d-btn__disabled:active {
+  box-shadow: 0px 1px 1px #FBFBFB;
+  transform: rotateX(0deg);
+  text-shadow: 0px 0px 5px white;
+}
+/*make his size*/
+.smUI-3d-btn__sm {
+  line-height: 20px;
+}
+.smUI-3d-btn__lg {
+  line-height: 50px;
+}

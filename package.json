@@ -14,6 +14,8 @@
     "dev:demo": "webpack-dev-server --content-base demo/dist --hot --port 8082 --config build/webpack.demo.config.js",
     "build": "webpack --config build/webpack.pro.config.js",
     "build:demo": "webpack --config build/webpack.demo-pro.config.js",
+    "build:sfc": "webpack --config build/webpack.sfc-pro.config.js",
+    "build:css": "lessc src/components/button.less dist/button.css",
     "pro": "webpack --config build/webpack.pro.config.js"
   },
   "repository": {
