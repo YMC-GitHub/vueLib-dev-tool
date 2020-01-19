@@ -35,7 +35,22 @@ npm run build
 
 02.use as a global component [demo source](./demo/src/main.js#L1-#L3)
 
+```js
+/*way:02 use as a global component*/
+import Vue from 'vue'
+import VueButton from 'xxx'
+Vue.component('v-button', VueButton)
+```
+
 03.use his tag in template tag [demo source](./demo/src/app.vue#L5-#L9)
+
+```vue
+<template>
+  <!-- ... -->
+    <v-button></v-button>
+  <!-- ... -->
+</template>
+```
 
 
 \# use as a locaol component
