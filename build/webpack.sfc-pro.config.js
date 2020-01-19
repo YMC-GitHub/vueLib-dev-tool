@@ -1,1 +1,1 @@
-moudule.exports = require('./webpack.pro.config');
+module.exports = require('./webpack.pro.config');
