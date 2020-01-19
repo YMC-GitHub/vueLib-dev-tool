@@ -34,20 +34,35 @@ get demo [here](https://ymc-github.github.io/vueLib-dev-tool/demo/dist/index.htm
 01.install him `npm install  xxx`
 
 02.use him [demo](./demo/src/main.js#L1-#L3) :
+```vue
+<!--way:00 use as a locaol component-->
+<template>
+  <!-- ... -->
+    <px-button></px-button>
+  <!-- ... -->
+</template>
+<script>
+import PxButton from 'xxx'
+export default {
+  /* ... */
+  components: {
+    PxButton
+  }
+}
+</script>
 ```
-//way:00 use as a locaol component
-import VueButton from 'xxx'
-//..
 
-//way:01 use as a global component
+```js
+/*way:01 use as a global component*/
 import Vue from 'vue'
-import VueButton from 'xxx'
-Vue.component('v-button', VueButton)
+import PxButton from 'xxx'
+Vue.component('px-button', PxButton)
 
-//way:02 use as a global component with some arg
+
+/*way:02 use as a global component with some arg*/
 import Vue from 'vue'
-import smUI from 'xxx'
-Vue.use(smUI, {});
+import PxButton from 'xxx'
+Vue.use(PxButton, {});
 ```
 
 ## author
