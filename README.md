@@ -29,11 +29,16 @@ npm run build
 
 ### how to use with producton?
 
-get demo [here](https://ymc-github.github.io/vueLib-dev-tool/demo/dist/index.html)
+\# use as a global component [demo here](./demo/dist/index.html)
 
 01.install him `npm install  xxx`
 
-02.use him [demo](./demo/src/main.js#L1-#L3) :
+02.use as a global component [demo source](./demo/src/main.js#L1-#L3)
+
+03.use his tag in template tag [demo source](./demo/src/app.vue#L5-#L9)
+
+
+\# use as a locaol component
 ```vue
 <!--way:00 use as a locaol component-->
 <template>
@@ -52,13 +57,9 @@ export default {
 </script>
 ```
 
+\# use as a global component with some arg
+
 ```js
-/*way:01 use as a global component*/
-import Vue from 'vue'
-import PxButton from 'xxx'
-Vue.component('px-button', PxButton)
-
-
 /*way:02 use as a global component with some arg*/
 import Vue from 'vue'
 import PxButton from 'xxx'
