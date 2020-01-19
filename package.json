@@ -10,7 +10,8 @@
     "bundle.js.gz"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --content-base demo/src --hot --port 8082 --config build/webpack.dev.config.js",
+    "dev": "webpack -w --config build/webpack.dev.config.js",
+    "dev:sfc": "webpack --config build/webpack.sfc-dev.config.js",
     "dev:demo": "webpack-dev-server --content-base demo/dist --hot --port 8082 --config build/webpack.demo-dev.config.js",
     "build": "npm run build:css && npm run build:sfc && npm run build:demo",
     "build:demo": "webpack --config build/webpack.demo-pro.config.js",

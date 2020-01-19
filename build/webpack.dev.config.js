@@ -5,10 +5,10 @@ const resolve = require('./webpack.resolve.config');
 const vueLoaderOptions = require('./vue-loader.config');
 
 module.exports = {
-  entry: path.resolve(dirConfig.demo, './src/main.js'),
+  entry: path.resolve(dirConfig.src, 'index.js'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(dirConfig.demo, './src')
+    path: dirConfig.dist
   },
   devtool: '#eval-source-map',
   mode: 'development',
