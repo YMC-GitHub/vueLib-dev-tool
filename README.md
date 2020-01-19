@@ -53,9 +53,9 @@ Vue.component('v-button', VueButton)
 ```
 
 
-\# use as a locaol component
+\# use as a local component
 ```vue
-<!--way:00 use as a locaol component-->
+<!--way:00 use as a local component-->
 <template>
   <!-- ... -->
     <px-button></px-button>
@@ -74,11 +74,37 @@ export default {
 
 \# use as a global component with some arg
 
+
 ```js
 /*way:02 use as a global component with some arg*/
 import Vue from 'vue'
 import PxButton from 'xxx'
 Vue.use(PxButton, {});
+```
+
+\# use with an outreach style by link [demo here](./demo/dist/index.html)
+
+01.include css with html link tag [demo source](./demo/dist/index02.html#L8-#L8)
+
+```html
+<head>
+   <!-- ... -->
+  <!-- use with an outreach style by link -->
+  <link type="text/css" rel="styleSheet" href="../../dist/button.css" />
+   <!-- ... -->
+</head>
+```
+
+02.wirte html with some css style  [demo source](./demo/dist/index02.html#L12-#L14)
+
+```html
+<body>
+   <!-- ... -->
+  <div class="smUI-3d-btn smUI__unselect smUI-3d-btn__aquamarine">
+    hello
+  </div>
+   <!-- ... -->
+</body>
 ```
 
 ## author
