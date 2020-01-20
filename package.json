@@ -13,10 +13,11 @@
     "dev": "webpack -w --config build/webpack.dev.config.js",
     "dev:sfc": "webpack --config build/webpack.sfc-dev.config.js",
     "dev:demo": "webpack-dev-server --content-base demo/dist --hot --port 8082 --config build/webpack.demo-dev.config.js",
-    "build": "npm run build:css && npm run build:sfc && npm run build:demo",
+    "build": "npm run build:sfc:css && npm run build:sfc:one && npm run build:demo",
     "build:demo": "webpack --config build/webpack.demo-pro.config.js",
     "build:sfc": "webpack --config build/webpack.sfc-pro.config.js",
-    "build:css": "webpack --config build/webpack.ext-pro.config.js",
+    "build:sfc:css": "webpack --config build/webpack.css-pro.config.js",
+    "build:sfc:one": "webpack --config build/webpack.sfc-pro.config.js",
     "pro": "webpack --config build/webpack.pro.config.js"
   },
   "repository": {
