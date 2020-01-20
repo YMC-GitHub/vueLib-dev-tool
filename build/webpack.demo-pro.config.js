@@ -12,7 +12,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(dirConfig.demo, 'dist'),
     //set him for static site in my github repo
-    publicPath: '/demo/dist'
+    //publicPath: '/demo/dist'
   },
   devtool: '#source-map',
   mode: 'production',
