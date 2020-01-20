@@ -1,6 +1,6 @@
 {
   "name": "vuelib-dev-tool",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "a tool for building vue componnets lib",
   "main": "dist/bundle.js",
   "files": [
