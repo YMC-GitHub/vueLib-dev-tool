@@ -17,7 +17,8 @@
     "build:demo": "webpack --config build/webpack.demo-pro.config.js",
     "build:sfc": "webpack --config build/webpack.sfc-pro.config.js",
     "build:sfc:css": "webpack --config build/webpack.css-pro.config.js",
-    "build:sfc:one": "webpack --config build/webpack.sfc-pro.config.js",
+    "build:sfc:one": "webpack --config build/webpack.one-pro.config.js",
+    "build:sfc:two": "webpack --config build/webpack.two-pro.config.js",
     "pro": "webpack --config build/webpack.pro.config.js"
   },
   "repository": {
