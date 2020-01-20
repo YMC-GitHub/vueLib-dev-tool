@@ -111,6 +111,6 @@ Vue.use(PxButton, {});
 
 yemiancheng <ymc.github@gmail.com>
 
-## licence
+## license
 
 MIT
