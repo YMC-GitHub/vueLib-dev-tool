@@ -4,10 +4,8 @@
   "description": "a tool for building vue componnets lib",
   "main": "dist/bundle.js",
   "files": [
-    "dist/bundle.js",
-    "README.md",
-    "package.json",
-    "bundle.js.gz"
+    "dist/",
+    "src/"
   ],
   "scripts": {
     "dev": "webpack -w --config build/webpack.dev.config.js",
